@@ -31,16 +31,20 @@ a{
     font-family: 'Nunito';
     color: white;      
     margin: 5% 10%;
-    padding: 0 1%;
-    display: flex;
+    /*padding: 0 1%;
     border: 1px solid white;
+    */
+    display: flex;
+    
     border-radius: 5px;
 }
 .sidebar{
     width: 2px;
     margin: 0.5% 1%;
+    /*
     background-color: white;    
     border-radius: 99px;
+    */
 }
 .sideBorder{
     width: 100%;    
@@ -50,8 +54,16 @@ a{
 .mainContent{
     flex:1;
     margin: 1% 0;    
+    border: 2px solid;
+    padding: 1%;
 }
 .mainContent h4,.mainContent h3,.mainContent h2,.mainContent h1{display: inline;}
+.sections{
+    border: 2px solid;
+    padding: 5%;
+    margin-bottom: 5%;
+}
+.sections h2{margin-top: 0;}
 .sideContent{
     width: 30%;
     margin: 1% 0;    
