@@ -1,0 +1,11 @@
+body{margin: 0;}
+.headerContent{
+    background-color: black;
+    color: white;
+    height: 6vw;
+    background-image: url(/HarvestLife/img/yellowBanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
