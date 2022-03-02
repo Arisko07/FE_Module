@@ -22,3 +22,27 @@ a{
     text-decoration: unset;
     color: unset;
 }
+.content{
+    font-family: 'Nunito';
+    background: red;    
+    height: 4rem;
+    margin: 5% 10%;
+    display: flex;
+}
+.sidebar{
+    width: 2px;
+    background-color: white;    
+    height: 80%;
+    align-self: center;
+}
+.mainContent{
+    flex:1;
+    background-color: black;
+}
+.sideContent{
+    width: 30%;
+}
+.charactersTeyvat{
+    display: flex;
+    justify-content: center;
+}
