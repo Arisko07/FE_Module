@@ -54,8 +54,9 @@ a{
 .mainContent h4,.mainContent h3,.mainContent h2,.mainContent h1{display: inline;}
 .sideContent{
     width: 30%;
-    margin: 1% 0;
+    margin: 1% 0;    
 }
+.sideContent a{text-decoration: underline;}
 .contentText{margin-right: 5%;flex:1;}
 .contentText li{display: flex;}
 .contentText img{margin-right: 5%;}
