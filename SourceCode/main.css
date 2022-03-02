@@ -8,4 +8,17 @@ body{margin: 0;}
     background-size: cover;
     display: flex;
     align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Nunito';
+}
+.headerTitle{margin-left: 5%;}
+.codeLogo{
+    margin-right: 5%;
+    padding: 1%;
+    background-color: black;
+}
+a{
+    text-decoration: unset;
+    color: unset;
 }
