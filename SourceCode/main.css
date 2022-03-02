@@ -52,6 +52,8 @@ a{
     margin: 1% 0;
 }
 .contentText{margin-right: 5%;flex:1;}
+.contentText li{display: flex;}
+.contentText img{margin-right: 5%;}
 .contentArticle{display: flex;}
 .contentImage{width: 40%;}
 .contentImage img{width: 100%;}
