@@ -1,9 +1,14 @@
+html{
+    background-image: url(/HarvestLife/img/shooting.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 body{margin: 0;}
 .headerContent{
     background-color: black;
     color: white;
     height: 6vw;
-    background-image: url(/HarvestLife/img/yellowBanner.jpg);
+    background-image: url(../img/yellowBanner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -24,25 +29,51 @@ a{
 }
 .content{
     font-family: 'Nunito';
-    background: red;    
-    height: 4rem;
+    color: white;      
     margin: 5% 10%;
+    padding: 0 1%;
     display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
 }
 .sidebar{
     width: 2px;
+    margin: 0.5% 1%;
     background-color: white;    
-    height: 80%;
-    align-self: center;
+    border-radius: 99px;
 }
 .mainContent{
     flex:1;
-    background-color: black;
+    margin: 1% 0;    
 }
+.mainContent h4,.mainContent h3,.mainContent h2,.mainContent h1{display: inline;}
 .sideContent{
     width: 30%;
+    margin: 1% 0;
 }
+.contentText{margin-right: 5%;flex:1;}
+.contentArticle{display: flex;}
+.contentImage{width: 40%;}
+.contentImage img{width: 100%;}
 .charactersTeyvat{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Nunito';    
+    color: white;
+    padding-bottom: 5%;
 }
+.footer{
+    position: absolute;
+    width: 98%;    
+    background-color: black;
+    color:white;
+    font-family: 'Nunito';
+    padding: 1%;
+}
+.socials{
+    display: flex;
+    justify-content: center;    
+}
+.socials img{height: 25px;}
+.socials a{margin: 0 5px;}
