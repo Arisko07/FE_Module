@@ -104,3 +104,18 @@ a{
 }
 .socials img{height: 25px;}
 .socials a{margin: 0 5px;}
+
+/*Comment Section Styles*/
+.commentSection{
+    
+}
+.commentSection textarea{
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 50%;
+    margin-bottom: 2%;
+    min-height: 10%;
+}
+.commentSection label h4{margin-bottom: 2%;}
+.commentSection label,.commentSection textarea,.commentSection input{display: block;}
+/*Comment Section Styles*/
