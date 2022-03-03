@@ -57,7 +57,11 @@ a{
     border: 2px solid;
     padding: 1%;
 }
-.mainContent h4,.mainContent h3,.mainContent h2,.mainContent h1{display: inline;}
+.inlineHeading{display: inline;}
+.topBorderHeading{
+    border-top: 1px solid;
+    padding-top: 1em;
+}
 .sections{
     border: 2px solid;
     padding: 5%;
