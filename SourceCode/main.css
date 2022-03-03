@@ -69,6 +69,7 @@ a{
     margin: 1% 0;    
 }
 .sideContent a{text-decoration: underline;}
+.sideContent a:hover{color:greenyellow;}
 .contentText{margin-right: 5%;flex:1;}
 .contentText li{display: flex;}
 .contentText img{margin-right: 5%;}
