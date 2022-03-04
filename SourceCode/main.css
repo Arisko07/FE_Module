@@ -140,6 +140,6 @@ a{
     display: flex;
     flex-wrap: wrap;
 }
-.comment-container h1{text-shadow: 2px 2px black;}
+.comment-container h1{text-shadow: 2px 2px 5px black;}
 .comment-container p{margin: 0;}
 /*Comment Section Styles*/
