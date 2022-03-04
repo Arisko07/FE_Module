@@ -173,10 +173,14 @@ a{
 .search-bar input{
     border: 1px solid;
     width: 20%;
+    margin-left: 10px;
 }
 .search-bar{
     height: 25px;
     margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.search-bar input,.search-bar label,.search-bar button{height: 100%;}
+.search-bar input,.search-bar button{height: 100%;}
 /*brows style*/
