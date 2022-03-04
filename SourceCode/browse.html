@@ -1,10 +1,28 @@
 <html>
     <head></head>
     <body>
-        <section>
+        <section class="browse-page">
             <header></header>
-            <div class="main-content"></div>
+            <div class="main-content">
+                <form action="/action_page.php" method="get"></form>
+                    <label for="article ">Choose Your Article</label>
+                    <input list="articles" name="article" id="article">
+                    <datalist id="articles">
+                        <option value="Teyvat">
+                        <option value="Characters">
+                        <option value="Skills">
+                        <option value="Element">                    
+                    </datalist>
+                    <input type="submit" onclick="navigate()">
+                </form>
+            </div>
             <footer></footer>
         </section>
     </body>
+    <script>
+        function navigate(){
+            let articlePage = document.querySelector("#article");            
+            this.location.href=`${articlePage.value}.html`;
+        }
+    </script>
 </html>
