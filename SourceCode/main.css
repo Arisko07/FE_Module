@@ -1,10 +1,16 @@
-html{
+html{font-family: 'Nunito';}
+.teyvat-page .main-section{
     background-image: url(../img/shooting.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Nunito';
+    background-size: cover;    
 }
 body{margin: 0;}
+.main-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    min-height: 100vh; 
+}
 .headerContent{
     background-color: black;
     color: white;
@@ -92,7 +98,7 @@ a{
     padding-bottom: 5%;
 }
 .footer{
-    position: absolute;
+    
     width: 98%;    
     background-color: black;
     color:white;
@@ -144,3 +150,11 @@ a{
 .comment-container h1{text-shadow: 2px 2px 5px black;}
 .comment-container p{margin: 0;}
 /*Comment Section Styles*/
+
+
+
+/*brows style*/
+.page-not-found{display: none;}
+.browse-page header{height: 5vh;text-align: center;}
+.browse-page .main-content{text-align: center;}
+/*brows style*/

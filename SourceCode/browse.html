@@ -1,10 +1,13 @@
-<html>
-    <head></head>
+<html class="browse-page">
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Nunito">
+    </head>
     <body>
-        <section class="browse-page">
-            <header></header>
-            <div class="main-content">
-                <form action="/action_page.php" method="get"></form>
+        <section class="main-section">
+            <header><h1 class="page-not-found">Page Not Found</h1></header>
+            <div class="main-content">                
+                <div>
                     <label for="article ">Choose Your Article</label>
                     <input list="articles" name="article" id="article">
                     <datalist id="articles">
@@ -13,16 +16,38 @@
                         <option value="Skills">
                         <option value="Element">                    
                     </datalist>
-                    <input type="submit" onclick="navigate()">
-                </form>
+                    <input type="submit" onclick="fetchPage()">                    
+                </div>
             </div>
-            <footer></footer>
+            <footer class="footer">
+                <div class="socials">
+                    <a href="https://github.com/Arisko07/HarvestLife"><img alt="Git Icon" class="giticon" src="../img/gitwhite.png"></a>
+                    <a href="https://facebook.com"><img alt="Facebook Icon" class="faceIcon" src="../img/faceIcon.png"></a>
+                    <a href="https://linkedin.com"><img alt="LinkedIn Icon" class="faceIcon" src="../img/linked.png"></a>
+                    <a href="https://www.reddit.com/r/Genshin_Impact/"><img alt="Reddit Icon" class="faceIcon" src="../img/reddit-logo.png"></a>                
+                </div>
+                <div class="disclaimer"><p>Disclaimer: Materials referenced are not owned by the developer and is use as demontration purpose only</p></div>
+            </footer> <!--footer-->
         </section>
     </body>
     <script>
-        function navigate(){
+        async function fetchPage(){
+            const requestURL = 'pageList.json';
+            const request = new Request(requestURL);
+            const response = await fetch(request);
+            const pageList = await response.json();            
+            navigate(pageList)
+        }                
+        function navigate(pageLists){
             let articlePage = document.querySelector("#article");            
-            this.location.href=`${articlePage.value}.html`;
+            let errorPage = document.querySelector(".page-not-found");
+            let pageList = pageLists.pageList;
+            if(pageList.includes(articlePage.value)){                
+                this.location.href=`${articlePage.value}.html`;
+            }
+            else{
+                errorPage.style.display="block";
+            }                        
         }
     </script>
 </html>
