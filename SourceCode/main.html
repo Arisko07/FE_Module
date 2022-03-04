@@ -73,9 +73,9 @@
             </div><!--Embedded Video-->
             <section class="comment-container">
                 <h1>User Feedback</h1>
-                <div >
+                <section class="comment-article">
 
-                </div>                
+                </section>              
             </section>        
             <footer class="footer">
                 <div class="socials">
@@ -92,7 +92,7 @@
         function submitForm(){
             let userName = document.querySelector("#user-name");
             let comment = document.querySelector("#comment-section");
-            let commentContainer = document.querySelector(".comment-container");
+            let commentContainer = document.querySelector(".comment-article");
             let commentSection="";            
             if(userName.value=="" || comment.value==""){                
                 if(userName.value==""){

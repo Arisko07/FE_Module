@@ -120,11 +120,26 @@ a{
 .commentSection label h4{margin-bottom: 2%;}
 .commentSection label,.commentSection textarea,.commentSection input{display: block;}
 .comment-container{
-    margin: 0 5%;
+    margin: 0 10% 5% 10%;
     color:white;
 }
 .comment-container strong{
     text-transform: capitalize;
+    font-size: 1.3em;
 }
-.comment-container article{padding-left: 5%;}
+.comment-container article{
+    margin-left: 1%;
+    margin-bottom: 1%;
+    min-width: 28%;
+    padding: 2%;
+    box-shadow: 1px 1px 4px black;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
+}
+.comment-article{
+    display: flex;
+    flex-wrap: wrap;
+}
+.comment-container h1{text-shadow: 2px 2px black;}
+.comment-container p{margin: 0;}
 /*Comment Section Styles*/
