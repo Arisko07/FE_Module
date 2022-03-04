@@ -10,6 +10,7 @@ body{margin: 0;}
     flex-direction: column;
     justify-content: space-between;    
     min-height: 100vh; 
+    background-color: aliceblue;
 }
 .headerContent{
     background-color: black;
@@ -155,6 +156,27 @@ a{
 
 /*brows style*/
 .page-not-found{display: none;}
-.browse-page header{height: 5vh;text-align: center;}
+.browse-page header{height: 7vh;text-align: center;background-color: grey;}
 .browse-page .main-content{text-align: center;}
+.browse-page button{
+    border: 1px solid black;
+    height: 100%;
+    border-left: unset;
+    position: relative;
+    left: -5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-family: nunito;
+    padding: 0 30px;
+}
+.search-bar input{
+    border: 1px solid;
+    width: 20%;
+}
+.search-bar{
+    height: 25px;
+    margin-bottom: 5%;
+}
+.search-bar input,.search-bar label,.search-bar button{height: 100%;}
 /*brows style*/
