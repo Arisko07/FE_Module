@@ -1,5 +1,5 @@
-html{font-family: 'Nunito';}
-.teyvat-page .main-section{
+html{font-family: 'Nunito';color:white;}
+.main-section{
     background-image: url(../img/shooting.jpg);
     background-repeat: no-repeat;
     background-size: cover;    
