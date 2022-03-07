@@ -155,7 +155,14 @@ a{
 
 
 /*brows style*/
-.page-not-found{display: none;}
+.page-not-found{
+    display: none;    
+    position: absolute;
+    width: 100%;
+    bottom: 60%;
+    text-transform: uppercase;
+    font-size: 3em;
+}
 .browse-page header{height: 7vh;text-align: center;background-color: grey;}
 .browse-page .main-content{text-align: center;}
 .browse-page button{
