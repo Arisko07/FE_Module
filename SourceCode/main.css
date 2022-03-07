@@ -207,7 +207,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100px;
+    border-radius: 1000px;
 }
 .home-page-button img{width: 60%;}
 /*home page style*/
