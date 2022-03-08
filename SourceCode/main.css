@@ -15,7 +15,7 @@ body{margin: 0;}
 .headerContent{
     background-color: black;
     color: white;
-    height: 6vw;
+    height: 4vw;
     background-image: url(../img/yellowBanner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,8 +39,10 @@ a{
 }
 .content{
     font-family: 'Nunito';
-    color: white;      
-    margin: 5% 10%;
+    color: white; 
+    width: 1280px;     
+    margin: 5% auto;
+    min-height: 65vh;
     /*padding: 0 1%;
     border: 1px solid white;
     */
@@ -210,4 +212,44 @@ a{
     border-radius: 1000px;
 }
 .home-page-button img{width: 60%;}
+.home-page .content{
+    display: flex;
+    flex-direction: column;
+}
+.hot-news{
+    display: flex;
+    justify-content: space-between;
+}
+.hot-news article{    
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    padding-bottom: 10px;
+    border-radius: 10px;   
+    background-color: rgba(0,0,0,0.3);
+}
+.hot-news .art-footer,
+.hot-news article p,
+.hot-news article h3{margin: 10px 20px;}
+.hot-news .art-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+.hot-news .art-footer strong{color: orange;}
+.hot-news .art-wrapper{
+    width: 380px;
+    height: 190px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.hot-news img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+.hot-news img:hover {
+    transform: scale(1.5);
+  }
 /*home page style*/
