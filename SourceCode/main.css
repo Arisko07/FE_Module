@@ -168,7 +168,7 @@ a{
     font-size: 3em;
 }
 .browse-page .main-content{text-align: center;}
-.browse-page button{
+.search-bar button{
     border: 1px solid black;
     height: 100%;
     border-left: unset;

@@ -36,25 +36,5 @@
             </footer> <!--footer-->
         </section>
     </body>
-    <script>
-        async function fetchPage(){
-            const requestURL = '../pageList.json';
-            const request = new Request(requestURL);
-            const response = await fetch(request);
-            const pageList = await response.json();            
-            navigate(pageList)
-        }                
-        function navigate(pageLists){
-            let articlePage = document.querySelector("#article");            
-            let errorPage = document.querySelector(".page-not-found");
-            let pageList = pageLists.pageList;
-            if(pageList.includes(articlePage.value)){     
-                console.log(`../${articlePage.value}/index.html`);
-                this.location.href=`../${articlePage.value}/index.html`;
-            }
-            else{
-                errorPage.style.display="block";
-            }                        
-        }
-    </script>
+    <script src="../main.js"></script>
 </html>
