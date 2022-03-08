@@ -25,6 +25,11 @@ body{margin: 0;}
     justify-content: space-between;
     font-family: 'Nunito';
 }
+.headerTitle img{
+    height: 90%;
+    position: relative;
+    left: -4vw;
+}
 .headerTitle{margin-left: 5%;}
 .codeLogo{
     margin-right: 5%;
@@ -199,7 +204,7 @@ a{
 /*brows style*/
 
 /*home page style*/
-.home-page-button{position: absolute;}
+.home-page-button{position: absolute;z-index: 99;}
 .home-page-button div{
     position: relative;
     background-color: white;
