@@ -44,3 +44,26 @@ function submitForm(){
         comment.value="";
     }  
 }
+
+function openNav() {
+    let side = document.querySelector(".sideContent");
+    let arrow = document.querySelector(".arrow");    
+    if(!side.classList.contains("open")){
+        side.style.width = "50%";
+        side.style.padding = "5%";
+        side.classList.add("open");
+        side.classList.remove("close");
+
+        arrow.classList.remove("right");
+        arrow.classList.add("left");
+    }
+    else{
+        side.style.width = "0%";
+        side.style.padding = "5% 0";
+        side.classList.remove("open");
+        side.classList.add("close");
+
+        arrow.classList.add("right");
+        arrow.classList.remove("left");
+    }
+  }
