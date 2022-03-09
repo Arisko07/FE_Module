@@ -122,6 +122,12 @@ a{
 .socials img{height: 25px;}
 .socials a{margin: 0 5px;}
 
+.teyvat-page .charactersTeyvat .frameWrapper{
+    width: 44.5%;
+    padding-bottom: 25%;
+    position: relative;
+}
+
 /*Comment Section Styles*/
 .commentSection textarea{
     min-width: 100%;
@@ -369,6 +375,10 @@ a{
     .sideContent .sections{display: none;}
     .sideContent.open .commentSection,
     .sideContent.open .sections{display: block;}
+    .teyvat-page .charactersTeyvat .frameWrapper{
+        width: 90%;
+        padding-bottom: 50.5%;
+    }
 }
 @media screen and (min-width: 1001px) {
     .sideContent {
