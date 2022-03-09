@@ -45,7 +45,8 @@ a{
 .content{
     font-family: 'Nunito';
     color: white; 
-    width: 1280px;     
+    /*width: 1280px;     */
+    width: 67%;
     margin: 5% auto;
     min-height: 65vh;
     /*padding: 0 1%;
@@ -217,10 +218,11 @@ a{
     display: flex;
     justify-content: space-between;
 }
-.hot-news article{    
+.hot-news article{     
     display: flex;
     flex-direction: column;
     width: 420px;
+    width: 32.8125%;
     padding-bottom: 10px;
     border-radius: 10px;   
     background-color: rgba(0,0,0,0.3);
@@ -236,9 +238,12 @@ a{
 .hot-news .art-footer strong{color: orange;}
 .hot-news .art-wrapper{
     width: 380px;
-    height: 190px;
-    margin: 20px auto;
-    overflow: hidden;
+    width: 90.47619047619048%;
+    height: 0;
+    padding-bottom: 50%;
+    background-size: cover;
+    margin: 5% auto;
+    background-position: center;
 }
 .hot-news img{
     height: 100%;
@@ -246,8 +251,8 @@ a{
     object-fit: cover;
     transition: transform .5s ease;
 }
-.hot-news img:hover {
-    transform: scale(1.5);
+.hot-news .art-wrapper:hover {    
+    background-size: 140%;
 }
 .major-nation ul,
 .major-nation li{
@@ -257,7 +262,8 @@ a{
 .major-nation{margin-top: 10%;}
 .major-nation li{
     position: relative;
-    height: 173px;
+    height: 0;
+    padding-bottom: 13.515625%;
 }
 .major-nation li h1{
     display: flex;
@@ -298,9 +304,27 @@ a{
 }
 .major-nation .background-image{
     width: 100%;
-    height: 101%;
+    height: 0;
+    padding-bottom: 13.515625%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 /*home page style*/
+
+/*Media Queries*/
+@media screen and (max-width: 1000px) {
+    .home-page .content{
+        width: 100%;
+        margin:1% 0;
+    }
+    .hot-news{
+        flex-direction: column;
+        padding: 0 10%;
+    }
+    .hot-news article{
+        width: 100%;
+        margin:2% 0;
+    }
+}
+/*Media Queries*/
