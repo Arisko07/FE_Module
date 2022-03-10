@@ -251,13 +251,16 @@ a{
     background-size: cover;
     margin: 5% auto;
     background-position: center;
+    transition: transform .5s ease;
 }
+/*
 .hot-news img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     transition: transform .5s ease;
 }
+*/
 .hot-news .art-wrapper:hover {    
     background-size: 140%;
 }
