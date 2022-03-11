@@ -9,8 +9,7 @@ function navigate(pageLists){
     let articlePage = document.querySelector("#article");            
     let errorPage = document.querySelector(".page-not-found");
     let pageList = pageLists.pageList;
-    if(pageList.includes(articlePage.value)){     
-        console.log(`../${articlePage.value}/index.html`);
+    if(pageList.includes(articlePage.value)){             
         this.location.href=`../${articlePage.value}/index.html`;
     }
     else{
@@ -25,8 +24,7 @@ async function fetchArticles(){
     createArticles(articles)
 } 
 function createArticles(articles){
-    let articleContainer = document.querySelector(".article-list");
-    console.log(articles)
+    let articleContainer = document.querySelector(".article-list");    
     articles.articles.forEach( article => {
         articleContainer.innerHTML+=`
         <section class="section-item">
@@ -39,6 +37,28 @@ function createArticles(articles){
         </section>
         `
     });
+}
+async function fetchNations(){
+    const requestURL = '../majorNation.json';
+    const request = new Request(requestURL);
+    const response = await fetch(request);
+    const nations = await response.json();            
+    createNation(nations)
+}
+function createNation(nations){
+    let nationContainer = document.querySelector(".nation-list");
+    console.log(nations);
+    nations.majorNation.forEach( nation => {
+        nationContainer.innerHTML +=`
+        <div class="nation">
+            <div class="emblem"><img src="../../img/${nation.nation[0]}"><h1>${nation.nation[1]}</h1></div>
+            <div class="element"><img src="../../img/${nation.element[0]}"><h1>${nation.element[1]}</h1></div>
+            <div class="archon">${nation.archon}</div>
+            <div class="ideal">${nation.ideal}</div>
+            <div class="government">${nation.government}</div>
+        </div>
+        `
+    })
 }
 function submitForm(){
     let userName = document.querySelector("#user-name");

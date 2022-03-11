@@ -1,0 +1,53 @@
+{    
+    "majorNation":[        
+        {
+            "nation":["Mondstadt.webp","Mondstadt"],
+            "element":["Element_Anemo.png","Anemo"],
+            "archon":"Barbatos, as<strong>&nbspVenti</strong>",
+            "ideal":"Freedom",
+            "government":"Knights of Favonius"
+        },
+        {
+            "nation":["Liyue.webp","Liyue"],
+            "element":["Element_Geo.png","Geo"],
+            "archon":"Morax, as <strong>&nbspZhongli</strong>",
+            "ideal":"Contracts",
+            "government":"Liyue Qixing"
+        },
+        {
+            "nation":["Inazuma.webp","Inazuma"],
+            "element":["Element_Electro.png","Electro"],
+            "archon":"Beelzebul, as <strong>&nbspEi</strong>",
+            "ideal":"Eternity",
+            "government":"Inazuma Shogunate"
+        },
+        {
+            "nation":["unknown.webp","Sumeru"],
+            "element":["Element_Dendro.png","Dendro"],
+            "archon":"Lesser Lord <strong>&nbspKusanali</strong>",
+            "ideal":"Wisdom",
+            "government":"Coming Soon"
+        },
+        {
+            "nation":["unknown.webp","Fontaine"],
+            "element":["Element_Hydro.png","Hydro"],
+            "archon":"The God of Justice",
+            "ideal":"Justice",
+            "government":"Coming Soon"
+        },
+        {
+            "nation":["unknown.webp","Natlan"],
+            "element":["Element_Pyro.png","Pyro"],
+            "archon":"<strong>Murata</strong>",
+            "ideal":"War",
+            "government":"Coming Soon"
+        },
+        {
+            "nation":["unknown.webp","Snezhnaya"],
+            "element":["Element_Cryo.png","Cryo"],
+            "archon":"The <strong>&nbspTsaritsa</strong>",
+            "ideal":"Chaos",
+            "government":"Coming Soon"
+        }
+    ]    
+}

@@ -1,6 +1,7 @@
 <html class="teyvat-page">
     <head>        
         <link rel="stylesheet" href="../main.css">
+        <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Nunito">        
         <Title>Teyvat</Title>
         <style>            
@@ -26,17 +27,7 @@
                             <h4 class="inlineHeading">Teyvat </h4> is the continent that serves as the primary region of Genshin Impact.
                             <p>You have arrived in Teyvat — a fantasy world where the seven elements flow and converge.</p>
                             <p>In the distant past, the Archons granted mortals unique elemental abilities. With the help of such powers, people formed a bountiful homeland out of the wilderness.</p>
-                            <p>However, 500 years ago, the collapse of an ancient civilization turned the universe upside down... Though the calamity the world suffered has ceased, peace has yet to be restored.</p>
-                            <h2 class="topBorderHeading">Major Nations</h2>
-                            <ul>
-                                <li><img alt="Anemo Element" src="../../img/Element_Anemo.png"><h3>Mondstadt</h3></li>
-                                <li><img alt="Geo Element" src="../../img/Element_Geo.png"><h3>Liyue</h3></li>
-                                <li><img alt="Electro Element" src="../../img/Element_Electro.png"><h3>Inazuma</h3></li>
-                                <li><img alt="Dendro Element" src="../../img/Element_Dendro.png"><h3>Sumeru</h3></li>
-                                <li><img alt="Hydro Element" src="../../img/Element_Hydro.png"><h3>Fontaine</h3></li>
-                                <li><img alt="Pryo Element" src="../../img/Element_Pyro.png"><h3>Natlan</h3></li>
-                                <li><img alt="Cryo Element" src="../../img/Element_Cryo.png"><h3>Snezhnaya</h3></li>                            
-                            </ul>
+                            <p>However, 500 years ago, the collapse of an ancient civilization turned the universe upside down... Though the calamity the world suffered has ceased, peace has yet to be restored.</p>                            
                         </div>
                         <figure class="contentImage">
                             <img alt="Teyvat Photo" src="../../img/map.png">
@@ -73,6 +64,20 @@
                     </div><!--commentSection-->
                 </aside>
             </div> <!--content-->
+            <div class="content">
+                <article class="contentText">
+                    <h2 class="topBorderHeading">Major Nations</h2>
+                    <div class="nation-list">
+                        <div class="nation nation-header">
+                            <div>Nation</div>
+                            <div>Element</div>
+                            <div>Archon</div>
+                            <div>Ideal</div>
+                            <div>Governing Body</div>
+                        </div>
+                    </div>                    
+                </article>
+            </div>
             <div class="charactersTeyvat">
                 <h1>Characters in Teyvat</h1>
                 <div class="frameWrapper">
@@ -97,4 +102,5 @@
         <section>
     </body>
     <script src="../main.js"></script>
+    <script>fetchNations();</script>
 </html>
