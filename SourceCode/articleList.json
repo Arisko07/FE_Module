@@ -1,37 +1,38 @@
 {
-    "article1": {
+    "articles":[ { 
         "type":"info",
         "date":"March 22, 2022",
         "img":"drink.jpg",
         "header":"Of Drink A-Dreaming Gameplay Details",
         "content":"The new event Of Drink A-Dreaming is about to begin! Luka from Mondstadt is inviting people to take part in Bartender Academy Week. He says that those whose customers walk away satisfied will receive impressive rewards..."
     },
-    "article2": {
+    {
         "type":"info",
         "date":"March 27, 2022",
         "img":"pai.jpg",
         "header":"Genshin Impact EP - A Scenery of Skylight and Serenity",
         "content":"The sakura petals scatter as they caress the earth, and dreams are renewed by transcending eternity. When the Narukami's musings finally bear fruit, the storm will give way to a serene skylight."
     },
-    "article3": {
+    {
         "type":"info",
         "date":"March 30, 2022",
         "img":"art1.jpg",
         "header":"Genshin Impact EP - The Iridescent Waves",
         "content":"Clouds move across the sea, riding the wind of distant mountains, reflected in a mirror of water. Waves in the heart, floating in the iridescent sky, silent as the moon of the quiet night."
     },
-    "article4": {
+    {
         "type":"info",
         "date":"April 10, 2022",
         "img":"art2.jpg",
         "header":"Paimon's Sneak Peek at Version 2.5 New Events - Phase II",
         "content":"In Version 2.5, there will be many new events available, let's take a look~"
     },
-    "article5": {
+    {
         "type":"info",
         "date":"April 12, 2022",
         "img":"weapon.jpg",
         "header":"Event Wish Epitome Invocation - Boosted Drop Rate for Engulfing Lightning (Polearm) and Everlasting Moonglow (Catalyst)!",
         "content":"Travelers, stock up on weapons and characters in Epitome Invocation to make your party stronger in combat!"
     }
+]
 }

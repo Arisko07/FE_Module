@@ -17,7 +17,29 @@ function navigate(pageLists){
         errorPage.style.display="block";
     }                        
 }
-
+async function fetchArticles(){
+    const requestURL = '../articleList.json';
+    const request = new Request(requestURL);
+    const response = await fetch(request);
+    const articles = await response.json();            
+    createArticles(articles)
+} 
+function createArticles(articles){
+    let articleContainer = document.querySelector(".article-list");
+    console.log(articles)
+    articles.articles.forEach( article => {
+        articleContainer.innerHTML+=`
+        <section class="section-item">
+            <img src="../../img/${article.img}">
+            <div>
+                <h1>${article.header}</h1>
+                <p>${article.content}</p>
+            </div>
+            <p class="date-item">${article.date}</p>
+        </section>
+        `
+    });
+}
 function submitForm(){
     let userName = document.querySelector("#user-name");
     let comment = document.querySelector("#comment-section");
