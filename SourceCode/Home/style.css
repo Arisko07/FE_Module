@@ -1,50 +1,67 @@
-.article-list{
-    background-image: linear-gradient(0deg, antiquewhite, transparent);
-    color: black;
-    display: grid;
-    row-gap: 10px;
-    padding: 2% 17%;
-    grid-template-rows: 0fr repeat(5, 1fr);
+.article-list {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(antiquewhite), to(transparent));
+  background-image: linear-gradient(0deg, antiquewhite, transparent);
+  color: black;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 10px;
+  padding: 2% 17%;
+  -ms-grid-rows: 0fr (1fr)[5];
+      grid-template-rows: 0fr repeat(5, 1fr);
 }
-.article-list button{
-    border: 0;
-    height: 30px;
-    width: 130px;
-    border-radius: 5px;
-    margin-right: 15px;
+
+.article-list button {
+  border: 0;
+  height: 30px;
+  width: 130px;
+  border-radius: 5px;
+  margin-right: 15px;
 }
-.section-item{
-    position: relative;
-    display: grid;
-    background-color: whitesmoke;
-    grid-template-columns: 2fr 6fr;
-    border-radius: 5px;
+
+.article-list .section-item {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  background-color: whitesmoke;
+  -ms-grid-columns: 2fr 6fr;
+      grid-template-columns: 2fr 6fr;
+  border-radius: 5px;
 }
-.section-item img{
-    width: 100%;
-    height: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-    object-fit: cover;
+
+.article-list .section-item img {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.image-wrapper{
-    width: 100%;
-    padding-bottom: 50%;
-    height: 0;
+
+.article-list .section-item div:nth-of-type(1) {
+  padding-right: 10px;
+  padding-bottom: 20px;
 }
-.section-item div:nth-of-type(1){
-    padding-right: 10px;
-    padding-bottom: 20px;
+
+.article-list .section-item .date-item {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  margin: 0;
+  font-size: 0.7em;
 }
-.section-item .date-item{
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    margin: 0;
-    font-size: 0.7em;
-}
+
 @media screen and (max-width: 1000px) {
-    .section-item {grid-template-columns: 1fr;}
-    .section-item div:nth-of-type(1){padding: 0 15px;padding-bottom: 20px;}
-    .article-list {padding: 5%;}
+  .section-item {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .section-item div:nth-of-type(1) {
+    padding: 0 15px;
+    padding-bottom: 20px;
+  }
+  .article-list {
+    padding: 5%;
+  }
 }
+/*# sourceMappingURL=style.css.map */
