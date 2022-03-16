@@ -414,6 +414,8 @@ a {
 }
 
 .hot-news .art-wrapper {
+  position: relative;
+  overflow: hidden;
   width: 380px;
   width: 90.47619047619048%;
   height: 0;
@@ -429,6 +431,23 @@ a {
 
 .hot-news .art-wrapper:hover {
   background-size: 140%;
+}
+
+.hot-news .art-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hot-news .art-wrapper img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .major-nation {
