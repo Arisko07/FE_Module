@@ -284,7 +284,7 @@ a{
     margin-top: 10%;
     img{
         position: absolute;
-        display: none;
+        opacity: 0;
         top: 0;    
         z-index: 99;    
         transition: all 0.2s 0s ease-in;
@@ -294,6 +294,9 @@ a{
         border: 5px solid $primary-color;
         box-sizing: border-box;
         object-position: right;
+        &:hover{
+            opacity: 1;
+        }
     }    
     .background-image{
         width: 100%;
@@ -323,7 +326,7 @@ a{
             justify-content: center;
             align-items: center;
         }
-        &:hover img{display: block;}
+        //&:hover img{display: block;}
         &::before {
             position: absolute;
             z-index: 2;

@@ -456,7 +456,7 @@ a {
 
 .major-nation img {
   position: absolute;
-  display: none;
+  opacity: 0;
   top: 0;
   z-index: 99;
   -webkit-transition: all 0.2s 0s ease-in;
@@ -470,6 +470,10 @@ a {
           box-sizing: border-box;
   -o-object-position: right;
      object-position: right;
+}
+
+.major-nation img:hover {
+  opacity: 1;
 }
 
 .major-nation .background-image {
@@ -509,10 +513,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.major-nation li:hover img {
-  display: block;
 }
 
 .major-nation li::before {
