@@ -174,15 +174,17 @@ a{
 
 
 /*brows style*/
-.page-not-found{
-    display: none;    
+.page-not-found{       
     position: absolute;
+    top:-40vh;
     width: 100%;
     bottom: 60%;
     text-transform: uppercase;
     font-size: 3em;
+    opacity: 0;    
+    transition: opacity 0.5s, top 1s;
 }
-.browse-page .main-content{text-align: center;}
+.browse-page .main-content{text-align: center;position: relative;}
 .search-bar button{
     border: 1px solid $secondary-color;
     height: 100%;
