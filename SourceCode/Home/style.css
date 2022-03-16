@@ -16,6 +16,17 @@
   width: 130px;
   border-radius: 5px;
   margin-right: 15px;
+  -webkit-transition: background-color 0.5s, -webkit-box-shadow 0.5s;
+  transition: background-color 0.5s, -webkit-box-shadow 0.5s;
+  transition: background-color 0.5s, box-shadow 0.5s;
+  transition: background-color 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
+.article-list button:hover {
+  color: whitesmoke;
+  background-color: black;
+  -webkit-box-shadow: 0 0 0 2px whitesmoke;
+          box-shadow: 0 0 0 2px whitesmoke;
 }
 
 .article-list .section-item {
