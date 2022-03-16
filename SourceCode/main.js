@@ -9,11 +9,13 @@ function navigate(pageLists){
     let articlePage = document.querySelector("#article");            
     let errorPage = document.querySelector(".page-not-found");
     let pageList = pageLists.pageList;
-    if(pageList.includes(articlePage.value)){             
+    console.log(articlePage.value)
+    if(pageList.includes(articlePage.value)){
         this.location.href=`../${articlePage.value}/index.html`;
     }
     else{
-        errorPage.style.display="block";
+        errorPage.style.opacity="1";
+        errorPage.style.top="-20vh";
     }                        
 }
 async function fetchArticles(){

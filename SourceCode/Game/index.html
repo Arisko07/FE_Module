@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Nunito">
+        <Title>Browse</Title>
+    </head>
+    <body>
+        <label for="board-type">Choose a Board:</label>
+        <select id="board-type" name="boardList" form="boardForm"> 
+            <option value="">--x--</option>
+            <option value="saab">4x4</option>
+            <option value="opel">8x8</option>
+            <option value="audi">16x16</option>
+            <option value="audi">32x32</option>
+        </select>
+        <div class="card-container" >
+            <div class="card-overlay"></div>
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-front">
+                    <img src="../../img/cardBack.png">
+                </div>
+                <div class="card-back">
+                    <img src="../../img/jean.png">
+                </div>
+            </div>
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-front">
+                    <img src="../../img/cardBack.png">
+                </div>
+                <div class="card-back">
+                    <img src="../../img/xiao.png">
+                </div>
+            </div>
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-front">
+                    <img src="../../img/cardBack.png">
+                </div>
+                <div class="card-back">
+                    <img src="../../img/xiao.png">
+                </div>
+            </div>
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-front">
+                    <img src="../../img/cardBack.png">
+                </div>
+                <div class="card-back">
+                    <img src="../../img/jean.png">
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        let check = 0;
+        let card1 ="";        
+        function flipCard(card){   
+            cardProtection = document.querySelector(".card-overlay");
+            card.style.transform="rotateY(180deg)";
+            card.style.zIndex = 99;
+            check++;
+            console.log(check);
+            if(check == 2){
+                cardProtection.style.zIndex = "98";
+                cardProtection.style.display = "block";
+                setTimeout(() => {
+                    card1.style.transform ="unset";
+                    card.style.transform ="unset";
+                    card1.style.zIndex ="0";
+                    card.style.zIndex ="0";
+                    cardProtection.style.zIndex = "0";
+                    cardProtection.style.display = "none";
+                    check = 0;
+                    }, 1000);                
+            }
+            else if(check == 1){
+                card1 = card;
+            }
+        }
+    </script>
+</html>
