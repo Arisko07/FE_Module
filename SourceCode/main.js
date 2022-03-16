@@ -92,10 +92,11 @@ function openNav() {
     let arrow = document.querySelector(".arrow");    
     if(!side.classList.contains("open")){
         side.style.width = "50%";
-        side.style.padding = "5%";
+        side.style.padding = "5%";        
         side.classList.add("open");
         side.classList.remove("close");
 
+        
         arrow.classList.remove("right");
         arrow.classList.add("left");
     }
