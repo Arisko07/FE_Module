@@ -58,6 +58,7 @@
         function placeCards(cardList){
             let cardContainer = document.querySelector(".card-container");
             let cardHTML = `<div class="card-overlay"></div>`;
+            cardList.cards = cardList.cards.concat(cardList.cards);
             shuffle(cardList.cards);
             cardList.cards.forEach( card => {
             cardHTML+=`
@@ -70,20 +71,7 @@
                 </div>
             </div>
             `
-            });
-            shuffle(cardList.cards);
-            cardList.cards.forEach( card => {
-            cardHTML+=`
-            <div class="card" name="${card.card_name}" onclick="flipCard(this)">
-                <div class="card-front">
-                    <img src="../../img/cardBack.png">
-                </div>
-                <div class="card-back">
-                    <img src="../../img/${card.card_image}" style="object-fit: ${card.size_image}">
-                </div>
-            </div>
-            `
-            });   
+            });          
             cardContainer.innerHTML = cardHTML;
         }
 
