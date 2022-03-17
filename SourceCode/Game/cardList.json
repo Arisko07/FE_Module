@@ -39,6 +39,46 @@
             "card_name":"xiao",
             "card_image":"xiao.png",
             "size_image":"cover"
+        },
+        {
+            "card_name":"cryo",
+            "card_image":"Element_cryo.png",
+            "size_image":"contain"
+        },
+        {            
+            "card_name":"art1",
+            "card_image":"art1.jpg",
+            "size_image":"cover"
+        },
+        {
+            "card_name":"drink",
+            "card_image":"drink.jpg",
+            "size_image":"cover"
+        },
+        {
+            "card_name":"pai",
+            "card_image":"pai.jpg",
+            "size_image":"cover"
+        },
+        {
+            "card_name":"shooting",
+            "card_image":"shooting.jpg",
+            "size_image":"cover"
+        },
+        {
+            "card_name":"redBanner",
+            "card_image":"redBanner.jpg",
+            "size_image":"cover"
+        },
+        {
+            "card_name":"mons",
+            "card_image":"mons.jpg",
+            "size_image":"cover"
+        },
+        {
+            "card_name":"inazuma",
+            "card_image":"inazuma.jpg",
+            "size_image":"cover"
         }
     ]    
 }

@@ -29,6 +29,12 @@ html {
   background-color: transparent;
 }
 
+.card-container.expert {
+  width: 110vh;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
 .card {
   position: relative;
   width: 100%;
