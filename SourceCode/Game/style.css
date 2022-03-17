@@ -2,6 +2,23 @@ html {
   background-color: black;
 }
 
+body {
+  margin: 0;
+}
+
+.container {
+  font-family: "Nunito";
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 7fr;
+      grid-template-columns: 1fr 7fr;
+  height: 100vh;
+}
+
+.container section {
+  background-color: white;
+}
+
 .card-container {
   background-color: transparent;
   display: -ms-grid;

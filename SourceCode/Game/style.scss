@@ -1,5 +1,16 @@
+$primary-font: 'Nunito';
 html{
     background-color: black;
+}
+body{margin: 0;}
+.container{
+    font-family: $primary-font;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    height: 100vh;
+    section{
+        background-color: white;
+    }
 }
 .card-container{
     background-color: transparent;

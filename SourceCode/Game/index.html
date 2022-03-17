@@ -2,21 +2,27 @@
     <head>
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Nunito">
-        <Title>Browse</Title>
+        <Title>Memory Game</Title>
     </head>
     <body>
-        <label for="board-type">Choose a Board:</label>
-        <select id="board-type" name="boardList" form="boardForm" onchange="fetchCards(this.value)">             
-            <option value="4">Beginner</option>
-            <option value="8">Intermediate</option>
-            <option value="16">Expert</option>            
-        </select>        
-        <div class="card-container" ></div>
+        <div class="container">
+            <section>
+                <label for="board-type"><h1>Difficulty</h1></label>
+                <select id="board-type" name="boardList" form="boardForm" onchange="fetchCards(this.value)">             
+                    <option value="4">Beginner</option>
+                    <option value="8">Intermediate</option>
+                    <option value="16">Expert</option>            
+                </select>
+            </section>        
+            <div class="card-container"></div>
+        </div>
     </body>
     <script>
         let check = 0;
         let card1 ="";        
+        let reset = 0;
         function flipCard(card){   
+            let difficulty = document.querySelector("#board-type");            
             cardProtection = document.querySelector(".card-overlay");
             card.style.transform="rotateY(180deg)";
             card.style.zIndex = 99;
@@ -39,11 +45,16 @@
                 card1 = card;
             }
             else{
+                reset++;
                 check=0;
                 card.removeAttribute("onclick");
                 card1.removeAttribute("onclick");
             }
-            console.log(check);
+
+            if(reset == difficulty.value){
+                reset = 0;
+                setTimeout(() => {fetchCards(difficulty.value);}, 4000);   
+            }            
         }
         fetchCards(4);        
         async function fetchCards(difficulty){
