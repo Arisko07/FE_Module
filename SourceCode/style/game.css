@@ -4,6 +4,7 @@ html {
 
 body {
   margin: 0;
+  color: #000;
 }
 
 .container {
@@ -12,7 +13,7 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 7fr;
       grid-template-columns: 1fr 7fr;
-  height: 100vh;
+  height: calc(100vh - 4vw);
 }
 
 .container section {

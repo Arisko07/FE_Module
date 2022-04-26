@@ -2,12 +2,12 @@ $primary-font: 'Nunito';
 html{
     background-color: black;
 }
-body{margin: 0;}
+body{margin: 0;color: #000;}
 .container{
     font-family: $primary-font;
     display: grid;
     grid-template-columns: 1fr 7fr;
-    height: 100vh;
+    height: calc(100vh - 4vw);
     section{
         background-color: white;
     }
