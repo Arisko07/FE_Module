@@ -1,7 +1,12 @@
+
+const cardListContainer = '../json/cardList.json';
+
 let check = 0;
 let card1 ="";        
 let reset = 0;
+
 fetchCards(4);
+
 function flipCard(card){   
     let difficulty = document.querySelector("#board-type");            
     cardProtection = document.querySelector(".card-overlay");
@@ -38,8 +43,7 @@ function flipCard(card){
     }            
 }     
 async function fetchCards(difficulty){    
-    const requestURL = '../json/cardList.json';
-    const request = new Request(requestURL);
+    const request = new Request(cardListContainer);
     const response = await fetch(request);
     const cardList = await response.json();            
     placeCards(cardList,difficulty)
