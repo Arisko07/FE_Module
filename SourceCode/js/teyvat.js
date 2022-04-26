@@ -1,47 +1,5 @@
-const pagelistContainer = '../json/pageList.json';
-const articleListContainer = '../json/articleList.json';
 const nationContainer = '../json/majorNation.json'
 
-async function fetchPage(){
-    const request = new Request(pagelistContainer);
-    const response = await fetch(request);
-    const pageList = await response.json();            
-    navigate(pageList)
-}                
-function navigate(pageLists){
-    let articlePage = document.querySelector("#article");            
-    let errorPage = document.querySelector(".page-not-found");
-    let pageList = pageLists.pageList;
-    console.log(articlePage.value)
-    if(pageList.includes(articlePage.value)){
-        this.location.href=`../view/${articlePage.value}Page.html`;
-    }
-    else{
-        errorPage.style.opacity="1";
-        errorPage.style.top="-20vh";
-    }                        
-}
-async function fetchArticles(){
-    const request = new Request(articleListContainer);
-    const response = await fetch(request);
-    const articles = await response.json();            
-    createArticles(articles)
-} 
-function createArticles(articles){
-    let articleContainer = document.querySelector(".article-list");    
-    articles.articles.forEach( article => {
-        articleContainer.innerHTML+=`
-        <section class="section-item">
-            <img src="../../img/${article.img}">
-            <div>
-                <h1>${article.header}</h1>
-                <p>${article.content}</p>
-            </div>
-            <p class="date-item">${article.date}</p>
-        </section>
-        `
-    });
-}
 async function fetchNations(){
     const request = new Request(nationContainer);
     const response = await fetch(request);
@@ -63,6 +21,7 @@ function createNation(nations){
         `
     })
 }
+
 function submitForm(){
     let userName = document.querySelector("#user-name");
     let comment = document.querySelector("#comment-section");
@@ -112,4 +71,4 @@ function openNav() {
         arrow.classList.add("right");
         arrow.classList.remove("left");
     }
-  }
+}

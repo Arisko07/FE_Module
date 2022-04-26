@@ -37,8 +37,7 @@ function flipCard(card){
         setTimeout(() => {fetchCards(difficulty.value);}, 4000);   
     }            
 }     
-async function fetchCards(difficulty){
-    console.log(difficulty)
+async function fetchCards(difficulty){    
     const requestURL = '../json/cardList.json';
     const request = new Request(requestURL);
     const response = await fetch(request);
