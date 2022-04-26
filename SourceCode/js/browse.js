@@ -9,13 +9,13 @@ async function fetchPage(){
 function navigate(pageLists){
     let articlePage = document.querySelector("#article");            
     let errorPage = document.querySelector(".page-not-found");
+    errorPage.classList.remove("show");
     let pageList = pageLists.pageList;
-        
+
     if(pageList.includes(articlePage.value)){
         this.location.href=`../view/${articlePage.value}Page.html`;
     }
     else{
-        errorPage.style.opacity="1";
-        errorPage.style.top="-20vh";
+        errorPage.classList.add("show");
     }                        
 }

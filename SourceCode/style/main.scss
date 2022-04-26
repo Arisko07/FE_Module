@@ -183,6 +183,10 @@ a{
     font-size: 3em;
     opacity: 0;    
     transition: opacity 0.5s, top 1s;
+    &.show{
+        opacity: 1;
+        top: -20px;
+    }
 }
 .browse-page .main-content{text-align: center;position: relative;}
 .search-bar button{
