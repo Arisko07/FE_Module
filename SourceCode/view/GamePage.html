@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../style/game.css">
+        <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Nunito">
+        <Title>Memory Game</Title>
+    </head>
+    <body>
+        <div class="container">
+            <section>
+                <label for="board-type"><h1>Difficulty</h1></label>
+                <select id="board-type" name="boardList" form="boardForm" onchange="fetchCards(this.value)">             
+                    <option value="4">Beginner</option>
+                    <option value="8">Intermediate</option>
+                    <option value="16">Expert</option>            
+                </select>
+            </section>        
+            <div class="card-container"></div>
+        </div>
+    </body>
+    <script src="../js/game.js"></script>
+</html>

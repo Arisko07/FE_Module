@@ -1,6 +1,9 @@
+const pagelistContainer = '../json/pageList.json';
+const articleListContainer = '../json/articleList.json';
+const nationContainer = '../json/majorNation.json'
+
 async function fetchPage(){
-    const requestURL = '../pageList.json';
-    const request = new Request(requestURL);
+    const request = new Request(pagelistContainer);
     const response = await fetch(request);
     const pageList = await response.json();            
     navigate(pageList)
@@ -11,7 +14,7 @@ function navigate(pageLists){
     let pageList = pageLists.pageList;
     console.log(articlePage.value)
     if(pageList.includes(articlePage.value)){
-        this.location.href=`../${articlePage.value}/index.html`;
+        this.location.href=`../view/${articlePage.value}Page.html`;
     }
     else{
         errorPage.style.opacity="1";
@@ -19,8 +22,7 @@ function navigate(pageLists){
     }                        
 }
 async function fetchArticles(){
-    const requestURL = '../articleList.json';
-    const request = new Request(requestURL);
+    const request = new Request(articleListContainer);
     const response = await fetch(request);
     const articles = await response.json();            
     createArticles(articles)
@@ -41,8 +43,7 @@ function createArticles(articles){
     });
 }
 async function fetchNations(){
-    const requestURL = '../majorNation.json';
-    const request = new Request(requestURL);
+    const request = new Request(nationContainer);
     const response = await fetch(request);
     const nations = await response.json();            
     createNation(nations)

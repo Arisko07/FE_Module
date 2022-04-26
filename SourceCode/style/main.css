@@ -13,7 +13,7 @@ a {
 }
 
 .main-section {
-  background-image: url(../img/shooting.jpg);
+  background-image: url(../../img/shooting.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -55,7 +55,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../img/yellowBanner.jpg);
+  background-image: url(../../img/yellowBanner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.8;
