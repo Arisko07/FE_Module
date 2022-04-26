@@ -10,21 +10,16 @@ fetchCards(4);
 function flipCard(card){   
     let difficulty = document.querySelector("#board-type");            
     cardProtection = document.querySelector(".card-overlay");
-    card.style.transform="rotateY(180deg)";
-    card.style.zIndex = 99;
+    card.classList.add("flip");    
     check++;                  
     if(card == card1){check=1;}
-    else if(check == 2 && (card.getAttribute("name") != card1.getAttribute("name"))){
-        cardProtection.style.zIndex = "98";
-        cardProtection.style.display = "block";
+    else if(check == 2 && (card.getAttribute("name") != card1.getAttribute("name"))){        
+        cardProtection.classList.add("show");
         check = 0;
         setTimeout(() => {
-            card1.style.transform ="unset";
-            card.style.transform ="unset";
-            card1.style.zIndex ="0";
-            card.style.zIndex ="0";
-            cardProtection.style.zIndex = "0";
-            cardProtection.style.display = "none";                    
+            card.classList.remove("flip");
+            card1.classList.remove("flip");                 
+            cardProtection.classList.remove("show");                   
             }, 1000);                
     }
     else if(check == 1){

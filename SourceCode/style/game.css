@@ -46,6 +46,11 @@ body {
   background-color: transparent;
 }
 
+.card-container .card-overlay.show {
+  display: block;
+  z-index: 98;
+}
+
 .card-container.expert {
   width: 110vh;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -74,6 +79,12 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.card.flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  z-index: 99;
 }
 
 .card-front, .card-back {
