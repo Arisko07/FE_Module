@@ -35,6 +35,11 @@
           flex-direction: column;
 }
 
+.nation-list .nation .element img,
+.nation-list .nation .emblem img {
+  width: 80%;
+}
+
 .nation-list .nation img, .nation-list .nation h1 {
   margin: 0;
 }
@@ -66,9 +71,11 @@
   .contentText {
     font-size: 8px;
   }
-  .contentText img {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+}
+
+@media screen and (max-width: 320px) {
+  .contentText {
+    font-size: 6px;
   }
 }
 /*# sourceMappingURL=teyvat.css.map */

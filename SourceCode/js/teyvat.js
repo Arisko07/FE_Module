@@ -14,7 +14,7 @@ function createNation(nations){
         <div class="nation">
             <div class="emblem"><img src="../../img/${nation.nation[0]}"><h1>${nation.nation[1]}</h1></div>
             <div class="element"><img src="../../img/${nation.element[0]}"><h1>${nation.element[1]}</h1></div>
-            <div class="archon">${nation.archon}</div>
+            <div class="archon"><span>${nation.archon}</span></div>
             <div class="ideal">${nation.ideal}</div>
             <div class="government">${nation.government}</div>
         </div>

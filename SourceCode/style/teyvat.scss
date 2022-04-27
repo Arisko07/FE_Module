@@ -16,7 +16,10 @@
             padding: 5%;
         }
         .element,
-        .emblem{flex-direction: column;}
+        .emblem{
+            flex-direction: column;
+            img{width: 80%;}
+        }
         img,h1{margin:0;}
     }      
     .nation-header{
@@ -40,9 +43,11 @@
 }
 @media screen and (max-width: 750px){
     .contentText {
-        font-size: 8px;
-        img{
-            transform: scale(0.8);
-        }   
+        font-size: 8px;        
+    }
+}
+@media screen and (max-width: 320px){
+    .contentText {   
+        font-size: 6px;      
     }
 }
