@@ -5,10 +5,10 @@ html{
 body{margin: 0;color: #000;}
 .container{
     font-family: $primary-font;
-    display: grid;
-    grid-template-columns: 1fr 7fr;
+    display: flex;    
     height: calc(100vh - 4vw);
-    section{
+    .game-menu{
+        padding: 0 2%;
         background-color: white;
     }
 }
@@ -76,4 +76,15 @@ body{margin: 0;color: #000;}
     @extend .card-front;   
     color: white;
     transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 320px) {
+    .container{
+        flex-direction: column;        
+        width: 100%;
+        .game-menu{
+            padding: 0 2%;
+            background-color: white;
+        }
+    }
 }

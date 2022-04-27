@@ -9,14 +9,14 @@ body {
 
 .container {
   font-family: "Nunito";
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 7fr;
-      grid-template-columns: 1fr 7fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: calc(100vh - 4vw);
 }
 
-.container section {
+.container .game-menu {
+  padding: 0 2%;
   background-color: white;
 }
 
@@ -106,5 +106,19 @@ body {
   color: white;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .container .game-menu {
+    padding: 0 2%;
+    background-color: white;
+  }
 }
 /*# sourceMappingURL=game.css.map */

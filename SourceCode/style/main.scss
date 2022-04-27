@@ -365,6 +365,7 @@ a{
   }
   
 .drag-article{
+    display: none;
     z-index: 99;
     background: $secondary-color;
     border: 0;
@@ -376,7 +377,10 @@ a{
     transition: 1s;
 }
 /*Media Queries*/
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
+    .drag-article{
+        display: block;
+    }
     .content{
         width: 100%;
         margin:1% 0;
@@ -389,7 +393,7 @@ a{
             margin:2% 0;
         }
     }    
-    .contentImage{width: 90%;}
+    .contentImage{width: 90%;margin: 0 5%;}
     .contentArticle{flex-direction: column;}
     .mainContent {margin: 1% 5%;}
     .sidebar{display: none;}
@@ -409,12 +413,6 @@ a{
     .teyvat-page .charactersTeyvat .frameWrapper{
         width: 90%;
         padding-bottom: 50.5%;
-    }
-}
-@media screen and (min-width: 1001px) {
-    .sideContent {
-        width: 30% !important;
-        padding: 0 !important;
     }
 }
 /*Media Queries*/
