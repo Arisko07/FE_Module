@@ -68,14 +68,26 @@
 }
 
 @media screen and (max-width: 750px) {
+  .close {
+    width: 0%;
+    padding: 5% 0;
+  }
   .contentText {
     font-size: 8px;
+  }
+  .open {
+    width: 50%;
+    padding: 5%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .contentText {
     font-size: 6px;
+  }
+  .open {
+    width: 80%;
+    padding: 5%;
   }
 }
 /*# sourceMappingURL=teyvat.css.map */
