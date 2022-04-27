@@ -379,6 +379,21 @@ a{
 
 /*Media Queries*/
 @media screen and (max-width: 750px) {
+    .headerContent{
+        height: 10vw;
+        .headerTitle img{
+            left: -8vw;
+        }
+        .home-page-button div{
+            width: 6vw;
+            height: 6vw;
+        }
+        .codeLogo {
+            font-size: 1.5vw;
+            margin-right: 5%;
+            padding: 2%;
+        }
+    }   
     .drag-article{
         display: block;
     }
