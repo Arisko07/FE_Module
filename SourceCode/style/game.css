@@ -60,7 +60,7 @@ body {
 }
 
 .card-container.inter {
-  width: 70%;
+  width: 60%;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -129,9 +129,6 @@ body {
   }
   .container .card-container {
     margin-top: 5%;
-    width: 80%;
-  }
-  .container .card-container.expert {
     width: 90%;
   }
 }

@@ -40,7 +40,7 @@ body{margin: 0;color: #000;}
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;  
     }
     &.inter{
-        width: 70%;
+        width: 60%;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
@@ -92,10 +92,7 @@ body{margin: 0;color: #000;}
         }
         .card-container{
             margin-top: 5%;
-            width: 80%;
-            &.expert{
-                width: 90%;
-            }
+            width: 90%;            
         }
     }
 }
