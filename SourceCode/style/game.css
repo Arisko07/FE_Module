@@ -29,7 +29,7 @@ body {
   display: -ms-grid;
   display: grid;
   /* grid-column-gap: 10px; */
-  width: 50%;
+  width: 60%;
   margin: auto;
   grid-gap: 10px;
   -ms-grid-columns: 357.1428571428571px 357.1428571428571px;
@@ -54,7 +54,7 @@ body {
 }
 
 .card-container.expert {
-  width: 80%;
+  width: 60%;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -115,6 +115,18 @@ body {
           transform: rotateY(180deg);
 }
 
+.timer {
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 10vw;
+  right: 5%;
+  margin-top: 10px;
+  padding: 0.5% 1%;
+  border-radius: 20px;
+  font-size: 1.5em;
+}
+
 @media screen and (max-width: 750px) {
   .container {
     -webkit-box-orient: vertical;
@@ -130,6 +142,9 @@ body {
   .container .card-container {
     margin-top: 5%;
     width: 90%;
+  }
+  .timer {
+    font-size: 1em;
   }
 }
 /*# sourceMappingURL=game.css.map */

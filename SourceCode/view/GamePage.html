@@ -14,7 +14,7 @@
             <div class="headerImage"></div>
             <a class="codeLogo" href="https://www.codeandtheory.com/" target="_blank"><div >Code and Theory</div></a> <!--target _blank opens new tab-->
         </header>
-        <div class="container">                        
+        <div class="container">                                
             <section class="game-menu">
                 <label for="board-type"><h1>Difficulty</h1></label>
                 <select id="board-type" name="boardList" form="boardForm" onchange="fetchCards(this.value)">             
@@ -24,7 +24,12 @@
                 </select>
             </section>        
             <div class="card-container"></div>
-        </div>        
+        </div>
+        <div class="timer">
+            <label id="minutes">00</label>
+            <label id="colon">:</label>
+            <label id="seconds">00</label> 
+        </div>  
     </body>
     <script src="../js/game.js"></script>
 </html>

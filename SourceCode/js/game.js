@@ -4,10 +4,17 @@ const cardListContainer = '../json/cardList.json';
 let check = 0;
 let card1 ="";        
 let reset = 0;
+let countUpTimer ="";
+let minutes = document.getElementById("minutes");
+let seconds = document.getElementById("seconds");
+let totalSeconds = 0;
 
 fetchCards(4);
 
-function flipCard(card){   
+function flipCard(card){ 
+    if(reset == 0 && countUpTimer == "") {
+        countUpTimer = setInterval(countUp, 1000);
+    }    
     let difficulty = document.querySelector("#board-type");            
     cardProtection = document.querySelector(".card-overlay");
     card.classList.add("flip");    
@@ -34,7 +41,14 @@ function flipCard(card){
 
     if(reset == difficulty.value){
         reset = 0;
-        setTimeout(() => {fetchCards(difficulty.value);}, 4000);   
+        clearInterval(countUpTimer);
+        setTimeout(() => {
+            fetchCards(difficulty.value);
+            countUpTimer = "";
+            totalSeconds = 0;
+            seconds.innerHTML = "00";
+            minutes.innerHTML = "00";
+        }, 4000);   
     }            
 }     
 async function fetchCards(difficulty){    
@@ -83,4 +97,24 @@ function shuffle(array) {
     }
 
     return array;
+}
+
+function countUp()
+{
+    ++totalSeconds;
+    seconds.innerHTML = pad(totalSeconds%60);
+    minutes.innerHTML = pad(parseInt(totalSeconds/60));
+}
+
+function pad(val)
+{
+    var valString = val + "";
+    if(valString.length < 2)
+    {
+        return "0" + valString;
+    }
+    else
+    {
+        return valString;
+    }
 }
