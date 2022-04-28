@@ -47,8 +47,9 @@ function placeCards(cardList,difficulty){
     let cardContainer = document.querySelector(".card-container");
     let cardStack = cardList.cards.slice(0, difficulty);
     let cardHTML = `<div class="card-overlay"></div>`;
+    cardContainer.classList.remove("expert","inter")
     if(difficulty == 16){cardContainer.classList.add("expert");}
-    else{cardContainer.classList.remove("expert")}
+    else if(difficulty == 9){cardContainer.classList.add("inter");}    
     cardStack = cardStack.concat(cardStack);
     shuffle(cardStack);
     cardStack.forEach( card => {
