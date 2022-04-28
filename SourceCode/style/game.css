@@ -15,8 +15,8 @@ body {
 }
 
 .container .game-menu {
-  height: calc(100vh - 4vw);
-  padding: 2%;
+  height: calc(96vh - 4vw);
+  padding: 2vh;
   background-color: white;
 }
 

@@ -1,6 +1,7 @@
 <html class="browse-page">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style/browse.css">
         <link rel="stylesheet" href="../style/main.css">
         <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Nunito">
         <Title>Browse</Title>
@@ -18,16 +19,18 @@
                 <h1 class="page-not-found">Page Not Found</h1>            
                 <div class="search-bar">
                     <label for="article ">Choose Your Article</label>
-                    <input list="articles" name="article" id="article">
-                    <datalist id="articles">
-                        <option value="Teyvat">
-                        <option value="Characters">
-                        <option value="Home">
-                        <option value="Game">
-                        <option value="Skills">
-                        <option value="Element">                    
-                    </datalist>
-                    <button type="submit" onclick="fetchPage()">Browse</button>
+                    <div class="search-group">
+                        <input list="articles" name="article" id="article">
+                        <datalist id="articles">
+                            <option value="Teyvat">
+                            <option value="Characters">
+                            <option value="Home">
+                            <option value="Game">
+                            <option value="Skills">
+                            <option value="Element">                    
+                        </datalist>
+                        <button type="submit" onclick="fetchPage()">Browse</button>
+                    </div>
                 </div>
             </div>
             <footer class="footer">

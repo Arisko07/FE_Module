@@ -198,6 +198,7 @@ a {
   color: white;
   font-family: "Nunito";
   padding: 1%;
+  text-align: center;
 }
 
 .socials {
@@ -281,67 +282,6 @@ a {
 }
 
 /*Comment Section Styles*/
-/*brows style*/
-.page-not-found {
-  position: absolute;
-  top: -40vh;
-  width: 100%;
-  bottom: 60%;
-  text-transform: uppercase;
-  font-size: 3em;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s, top 1s;
-  transition: opacity 0.5s, top 1s;
-}
-
-.page-not-found.show {
-  opacity: 1;
-  top: -20px;
-}
-
-.browse-page .main-content {
-  text-align: center;
-  position: relative;
-}
-
-.search-bar button {
-  border: 1px solid black;
-  height: 100%;
-  border-left: unset;
-  position: relative;
-  left: -5px;
-  background-color: black;
-  color: white;
-  font-weight: bold;
-  font-family: "Nunito";
-  padding: 0 30px;
-}
-
-.search-bar {
-  height: 25px;
-  margin-bottom: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.search-bar input, .search-bar button {
-  height: 100%;
-}
-
-.search-bar input {
-  border: 1px solid;
-  width: 20%;
-  margin-left: 10px;
-}
-
-/*brows style*/
 /*home page style*/
 .home-page-button {
   position: absolute;
@@ -633,6 +573,10 @@ a {
   .teyvat-page .charactersTeyvat .frameWrapper {
     width: 90%;
     padding-bottom: 50.5%;
+  }
+  .footer {
+    font-size: 12px;
+    padding: 5% 2%;
   }
 }
 

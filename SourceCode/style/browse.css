@@ -1,0 +1,102 @@
+/*brows style*/
+.page-not-found {
+  position: absolute;
+  top: -40vh;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 2em;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, top 1s;
+  transition: opacity 0.5s, top 1s;
+}
+
+.page-not-found.show {
+  opacity: 1;
+  top: -100px;
+}
+
+.browse-page .main-content {
+  text-align: center;
+  position: relative;
+}
+
+.search-bar {
+  height: 25px;
+  margin-bottom: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-bar .search-group {
+  max-width: 600px;
+  height: 100%;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-bar .search-group button {
+  border: 1px solid black;
+  height: 100%;
+  border-left: unset;
+  position: relative;
+  left: -5px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-family: "Nunito";
+  padding: 0 30px;
+  border-radius: 0 20px 20px 0;
+}
+
+.search-bar .search-group input, .search-bar .search-group button {
+  height: 100%;
+}
+
+.search-bar .search-group input {
+  border: 1px solid;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 20px;
+  border-radius: 20px 0 0 20px;
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 750px) {
+  .search-bar {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 50px;
+  }
+  .search-bar .search-group {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .search-bar .search-group input {
+    margin: 0;
+  }
+  .search-bar .search-group button {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search-bar {
+    margin: 0 10px;
+  }
+}
+
+/*brows style*/
+/*# sourceMappingURL=browse.css.map */
