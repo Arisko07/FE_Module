@@ -63,6 +63,9 @@ body{margin: 0;color: #000;}
         transform: rotateY(180deg);
         z-index: 99;
     }
+    &:hover{
+        z-index: 100;
+    }
   }
 .card-front {
     position: absolute;
@@ -75,6 +78,11 @@ body{margin: 0;color: #000;}
     background-color: white;
     border-radius: 1vh;
     color: black;
+    transition: background-color 0.5s, transform 0.5s;
+    .face-down &:hover{
+        background-color: grey;
+        transform: scale(1.2);
+    }
 }
 .card-back { 
     @extend .card-front;   

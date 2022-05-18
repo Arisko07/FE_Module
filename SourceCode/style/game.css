@@ -95,6 +95,10 @@ body {
   z-index: 99;
 }
 
+.card:hover {
+  z-index: 100;
+}
+
 .card-front, .card-back {
   position: absolute;
   width: 100%;
@@ -107,6 +111,16 @@ body {
   background-color: white;
   border-radius: 1vh;
   color: black;
+  -webkit-transition: background-color 0.5s, -webkit-transform 0.5s;
+  transition: background-color 0.5s, -webkit-transform 0.5s;
+  transition: background-color 0.5s, transform 0.5s;
+  transition: background-color 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.face-down .card-front:hover, .face-down .card-back:hover {
+  background-color: grey;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .card-back {
