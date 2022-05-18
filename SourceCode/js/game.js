@@ -10,7 +10,9 @@ let seconds = document.getElementById("seconds");
 let totalSeconds = 0;
 
 fetchCards(4);
-
+function pullMenu(){
+    document.querySelector(".game-menu").classList.toggle("open");
+}
 function flipCard(card){ 
     if(reset == 0 && countUpTimer == "") {
         countUpTimer = setInterval(countUp, 1000);

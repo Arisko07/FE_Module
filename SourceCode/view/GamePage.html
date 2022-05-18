@@ -16,6 +16,9 @@
         </header>
         <div class="container">                                
             <section class="game-menu">
+                <button class="pull-menu" onclick="pullMenu()">
+                    <div></div>
+                </button>
                 <label for="board-type"><h1>Difficulty</h1></label>
                 <select id="board-type" name="boardList" form="boardForm" onchange="fetchCards(this.value)">             
                     <option value="4">Beginner</option>
