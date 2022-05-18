@@ -17,7 +17,8 @@ function flipCard(card){
     }    
     let difficulty = document.querySelector("#board-type");            
     cardProtection = document.querySelector(".card-overlay");
-    card.classList.add("flip");    
+    card.classList.add("flip"); 
+    card.classList.remove("face-down");
     check++;                  
     if(card == card1){check=1;}
     else if(check == 2 && (card.getAttribute("name") != card1.getAttribute("name"))){        
@@ -25,9 +26,13 @@ function flipCard(card){
         check = 0;
         setTimeout(() => {
             card.classList.remove("flip");
-            card1.classList.remove("flip");                 
+            card1.classList.remove("flip");                         
+        }, 1000);       
+        setTimeout(() => {       
+            card.classList.add("face-down");
+            card1.classList.add("face-down");           
             cardProtection.classList.remove("show");                   
-            }, 1000);                
+        }, 1200);          
     }
     else if(check == 1){
         card1 = card;
@@ -68,7 +73,7 @@ function placeCards(cardList,difficulty){
     shuffle(cardStack);
     cardStack.forEach( card => {
     cardHTML+=`
-    <div class="card" name="${card.card_name}" onclick="flipCard(this)">
+    <div class="card face-down" name="${card.card_name}" onclick="flipCard(this)">
         <div class="card-front">
             <img src="../../img/cardBack.png">
         </div>
