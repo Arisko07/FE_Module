@@ -57,6 +57,71 @@ body {
   border-right: 3px solid black;
 }
 
+.container .box-3d {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotate3d(1, 1, 0, -60deg);
+          transform: rotate3d(1, 1, 0, -60deg);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 3s linear;
+  transition: -webkit-transform 3s linear;
+  transition: transform 3s linear;
+  transition: transform 3s linear, -webkit-transform 3s linear;
+}
+
+.container .box-3d .side {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+}
+
+.container .box-3d .side-2 {
+  background-color: red;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+
+.container .box-3d .side-3 {
+  background-color: green;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+
+.container .box-3d .side-4 {
+  background-color: blue;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+
+.container .box-3d .side-5 {
+  background-color: yellow;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+
+.container .box-3d .side-6 {
+  background-color: violet;
+  -webkit-transform: translateZ(-50px);
+          transform: translateZ(-50px);
+}
+
 .card-container {
   background-color: transparent;
   display: -ms-grid;

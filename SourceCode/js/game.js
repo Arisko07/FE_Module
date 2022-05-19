@@ -8,8 +8,16 @@ let countUpTimer ="";
 let minutes = document.getElementById("minutes");
 let seconds = document.getElementById("seconds");
 let totalSeconds = 0;
-
+let deg = 0
 fetchCards(4);
+spinBox();
+
+setInterval(spinBox, 500)
+function spinBox(){    
+    const box3D = document.querySelector(".box-3d");
+    box3D.style.transform = `rotate3d(1, 1, 0, ${deg}deg)`
+    deg+=5;    
+}
 function pullMenu(){
     document.querySelector(".game-menu").classList.toggle("open");
 }
