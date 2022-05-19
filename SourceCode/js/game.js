@@ -10,8 +10,6 @@ let seconds = document.getElementById("seconds");
 let totalSeconds = 0;
 let deg = 0
 fetchCards(4);
-spinBox();
-
 setInterval(spinBox, 500)
 function spinBox(){    
     const box3D = document.querySelector(".box-3d");
