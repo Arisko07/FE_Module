@@ -38,16 +38,26 @@ body{margin: 0;color: #000;}
             }        
         }
     }
+    .rotate {
+        animation: rotation 3s infinite linear;
+    }
+    @keyframes rotation {
+        from {
+            transform: rotate3d(1, 1, 0, 0);
+        }
+        to {
+            transform: rotate3d(1, 1, 0, 359deg);
+        }
+    }
     .box-3d{
         position: relative;        
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
         margin-top: 50px;
-        margin-left: 30px;
-        transform-style: preserve-3d;
-        transform: rotate3d(1, 1, 0, -60deg);
-        transform-origin: bottom;
-        transition: transform 3s linear;
+        margin-left: 30px;       
+        transform-style: preserve-3d;        
+        transform-origin: right bottom;
+        transition: transform 2s linear;
         .side{
             transform-style: preserve-3d;
             position: absolute;
@@ -57,29 +67,32 @@ body{margin: 0;color: #000;}
             left: 0;
             background-color: #000;
         }
+        .side-1{
+            transform: translateZ(25px);
+        }
         .side-2{
             background-color: red;
             transform-origin: bottom left;
-            transform: rotateX(90deg);
+            transform: rotateX(90deg) translateY(25px);
         }
         .side-3{
             background-color: green;
             transform-origin: top right;
-            transform: rotateX(-90deg);
+            transform: rotateX(-90deg) translateY(-25px);
         }
         .side-4{
             background-color: blue;
             transform-origin: right;
-            transform: rotateY(-90deg);
+            transform: rotateY(-90deg) translateX(25px);
         }
         .side-5{
             background-color: yellow;
             transform-origin: left;
-            transform: rotateY(90deg);
+            transform: rotateY(90deg) translateX(-25px);
         }
         .side-6{
             background-color: violet;
-            transform: translateZ(-30px) ;
+            transform: translateZ(-25px) ;
         }
     }
 }
