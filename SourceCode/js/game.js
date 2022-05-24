@@ -74,22 +74,30 @@ function placeCards(cardList,difficulty){
     let cardContainer = document.querySelector(".card-container");
     let cardStack = cardList.cards.slice(0, difficulty);
     let cardHTML = `<div class="card-overlay"></div>`;
+    let animation_delay = 0;
+    let xPos = 0;
     cardContainer.classList.remove("expert","inter")
     if(difficulty == 16){cardContainer.classList.add("expert");}
     else if(difficulty == 9){cardContainer.classList.add("inter");}    
     cardStack = cardStack.concat(cardStack);
     shuffle(cardStack);
-    cardStack.forEach( card => {
-    cardHTML+=`
-    <div class="card face-down" name="${card.card_name}" onclick="flipCard(this)">
-        <div class="card-front">
-            <img src="../../img/cardBack.png">
+    cardStack.forEach( (card, index) => {
+        if(difficulty == 4 && index == 4){
+            xPos = 0;
+        }
+        cardHTML+=`
+        <div class="card face-down" name="${card.card_name}" onclick="flipCard(this)" style="animation-delay: ${animation_delay}s;">
+            <div class="card-front">
+                <img src="../../img/cardBack.png">
+            </div>
+            <div class="card-back">
+                <img src="../../img/${card.card_image}" style="object-fit: ${card.size_image}">
+            </div>
         </div>
-        <div class="card-back">
-            <img src="../../img/${card.card_image}" style="object-fit: ${card.size_image}">
-        </div>
-    </div>
-    `
+        `
+        animation_delay += 0.05;
+        //xPos -= 105;
+        console.log(index);    
     });          
     cardContainer.innerHTML = cardHTML;
 }
