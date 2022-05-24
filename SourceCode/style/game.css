@@ -111,7 +111,7 @@ body {
   width: 50px;
   height: 50px;
   margin-top: 50px;
-  margin-left: 30px;
+  margin-left: 25px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transform-origin: right bottom;
@@ -130,7 +130,14 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #000;
+  background-color: #000 !important;
+}
+
+.container .box-3d .side img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .container .box-3d .side-1 {
@@ -139,7 +146,6 @@ body {
 }
 
 .container .box-3d .side-2 {
-  background-color: red;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   -webkit-transform: rotateX(90deg) translateY(25px);
@@ -147,15 +153,18 @@ body {
 }
 
 .container .box-3d .side-3 {
-  background-color: green;
   -webkit-transform-origin: top right;
           transform-origin: top right;
   -webkit-transform: rotateX(-90deg) translateY(-25px);
           transform: rotateX(-90deg) translateY(-25px);
 }
 
+.container .box-3d .side-3 img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .container .box-3d .side-4 {
-  background-color: blue;
   -webkit-transform-origin: right;
           transform-origin: right;
   -webkit-transform: rotateY(-90deg) translateX(25px);
@@ -163,7 +172,6 @@ body {
 }
 
 .container .box-3d .side-5 {
-  background-color: yellow;
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transform: rotateY(90deg) translateX(-25px);
@@ -171,7 +179,8 @@ body {
 }
 
 .container .box-3d .side-6 {
-  background-color: violet;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   -webkit-transform: translateZ(-25px);
           transform: translateZ(-25px);
 }

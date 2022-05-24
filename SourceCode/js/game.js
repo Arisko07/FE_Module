@@ -112,7 +112,7 @@ function placeCards(cardList,difficulty){
         console.log(index);    
     });          
     cardContainer.innerHTML = cardHTML;
-    setTimeout(() => spreadCard(), 500);   
+    setTimeout(() => spreadCard(), 100);   
 
 }
 function spreadCard(){
