@@ -73,9 +73,9 @@ async function fetchCards(difficulty){
 function placeCards(cardList,difficulty){            
     let cardContainer = document.querySelector(".card-container");
     let cardStack = cardList.cards.slice(0, difficulty);
-    let cardHTML = `<div class="card-overlay"></div>`;
-    let animation_delay = 0;
+    let cardHTML = `<div class="card-overlay"></div>`;    
     let xPos = 0;
+    let placement = 105;
     cardContainer.classList.remove("expert","inter")
     if(difficulty == 16){cardContainer.classList.add("expert");}
     else if(difficulty == 9){cardContainer.classList.add("inter");}    
@@ -85,8 +85,20 @@ function placeCards(cardList,difficulty){
         if(difficulty == 4 && index == 4){
             xPos = 0;
         }
+        else if(difficulty == 9){
+            placement = 108;
+            if(index == 6 || index == 12){
+                xPos = 0;
+            }
+        }
+        else if(difficulty == 16){
+            placement = 110;
+            if(index == 8 || index == 16 || index == 24){
+                xPos = 0;
+            }
+        }
         cardHTML+=`
-        <div class="card face-down" name="${card.card_name}" onclick="flipCard(this)" style="animation-delay: ${animation_delay}s;">
+        <div class="card face-down" name="${card.card_name}" onclick="flipCard(this)" style="transform:translateX(${xPos}%)">
             <div class="card-front">
                 <img src="../../img/cardBack.png">
             </div>
@@ -95,13 +107,23 @@ function placeCards(cardList,difficulty){
             </div>
         </div>
         `
-        animation_delay += 0.05;
-        //xPos -= 105;
+        //animation_delay += 0.05;
+        xPos -= placement;
         console.log(index);    
     });          
     cardContainer.innerHTML = cardHTML;
-}
+    setTimeout(() => spreadCard(), 500);   
 
+}
+function spreadCard(){
+    const cards = document.querySelectorAll(".card");
+    let animation_delay = 0;
+    cards.forEach( card => {
+        card.style.transitionDelay = `${animation_delay}s`;
+        card.style.transform = "translateX(0)";
+        animation_delay += 0.05;
+    });
+}
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
 

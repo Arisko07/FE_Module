@@ -232,8 +232,6 @@ body {
           transform-style: preserve-3d;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  -webkit-animation: cardGrow 0.5s ease-out backwards;
-          animation: cardGrow 0.5s ease-out backwards;
 }
 
 .card img {
@@ -244,8 +242,10 @@ body {
 }
 
 .card.flip {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  -webkit-transition-delay: 0s !important;
+          transition-delay: 0s !important;
+  -webkit-transform: rotateY(180deg) !important;
+          transform: rotateY(180deg) !important;
   z-index: 99;
 }
 
