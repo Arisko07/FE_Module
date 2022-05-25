@@ -47,9 +47,19 @@ function flipCard(card){
     }
     else{
         reset++;
-        check=0;
+        check=0;  
         card.removeAttribute("onclick");
-        card1.removeAttribute("onclick");
+        card1.removeAttribute("onclick");    
+        cardProtection.classList.add("show"); 
+        setTimeout(() => {                   
+            card.querySelector(".card-back").classList.add("hide");
+            card1.querySelector(".card-back").classList.add("hide");
+            cardProtection.classList.remove("show");
+        }, 500);  
+        setTimeout(() => {                
+            card.classList.add("hide");
+            card1.classList.add("hide");
+        }, 2000);  
     }
 
     if(reset == difficulty.value){

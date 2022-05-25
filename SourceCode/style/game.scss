@@ -162,7 +162,14 @@ body{margin: 0;color: #000;}
     &.flip{
         transition-delay: 0s !important;
         transform: rotateY(180deg) !important;
-        z-index: 99;
+        z-index: 99; 
+        &.hide{z-index: -1;}
+        .card-back.hide{                        
+            transition: transform 1s,  opacity 1.5s;                
+            transform: rotateY(180deg) scale(2);
+            opacity: 0;
+            z-index: -1;
+        }
     }
     &:hover{
         z-index: 100;
@@ -180,10 +187,10 @@ body{margin: 0;color: #000;}
     border: 2px white solid;
     border-radius: 1vh;
     color: black;
-    transition: background-color 0.5s, transform 0.5s;
-    .face-down &:hover{
+    transition: background-color 0.5s, transform 1s;
+    .face-down &:hover{        
         border-color: red;
-        transform: scale(1.2);
+        transform: scale(1.2);                
     }
 }
 .card-back { 
